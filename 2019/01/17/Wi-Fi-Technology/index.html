@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=6.7.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.7.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.7.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.7.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.7.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '6.7.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="WLAN Channel2.4 GHz 802.11b, 802.11g, 802.11n, 802.11ax To prevent the overlapping between channels, in most of the countries, 3 channels will be used">
+<meta name="keywords" content="learning,Wi-Fi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Wi-Fi Technology">
+<meta property="og:url" content="http://tommycmt.github.io/2019/01/17/Wi-Fi-Technology/index.html">
+<meta property="og:site_name" content="Tommy&#39;s blog">
+<meta property="og:description" content="WLAN Channel2.4 GHz 802.11b, 802.11g, 802.11n, 802.11ax To prevent the overlapping between channels, in most of the countries, 3 channels will be used">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://tommycmt.github.io/images/meta_welcome.png">
+<meta property="og:updated_time" content="2019-01-17T06:15:46.367Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Wi-Fi Technology">
+<meta name="twitter:description" content="WLAN Channel2.4 GHz 802.11b, 802.11g, 802.11n, 802.11ax To prevent the overlapping between channels, in most of the countries, 3 channels will be used">
+<meta name="twitter:image" content="http://tommycmt.github.io/images/meta_welcome.png">
+
+
+
+
+
+
+  <link rel="canonical" href="http://tommycmt.github.io/2019/01/17/Wi-Fi-Technology/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Wi-Fi Technology | Tommy's blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Tommy's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://tommycmt.github.io/2019/01/17/Wi-Fi-Technology/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tommy Tang">
+      <meta itemprop="description" content="I'm Tommy Tang. I like to solve puzzles. Fascinated in programming and problem-solving.">
+      <meta itemprop="image" content="/images/meta_welcome.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tommy's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Wi-Fi Technology
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-01-17 14:13:17 / Modified: 14:15:46" itemprop="dateCreated datePublished" datetime="2019-01-17T14:13:17+08:00">2019-01-17</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="WLAN-Channel"><a href="#WLAN-Channel" class="headerlink" title="WLAN Channel"></a>WLAN Channel</h2><h3 id="2-4-GHz"><a href="#2-4-GHz" class="headerlink" title="2.4 GHz"></a>2.4 GHz</h3><ul>
+<li>802.11b, 802.11g, 802.11n, 802.11ax</li>
+<li>To prevent the overlapping between channels, in most of the countries, 3 channels will be used<a id="more"></a></li>
+<li>channel 1, 6, 11<br><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/NonOverlappingChannels2.4GHzWLAN-en.svg/425px-NonOverlappingChannels2.4GHzWLAN-en.svg.png" alt="2.4GHz channels" title="2.4GHz channels"></li>
+<li>Relative lower speed</li>
+<li>Better penetration on different materials, longer distance and more stable</li>
+<li>Many other technologies are using 2.4GHz also, e.g. bluebooth, Microwave oven, wireless microphones</li>
+<li>Interference would be a problem</li>
+</ul>
+<h3 id="5-GHz"><a href="#5-GHz" class="headerlink" title="5 GHz"></a>5 GHz</h3><ul>
+<li>802.11a, 802.11n, 802.11ac, 802.11ax</li>
+<li>Much more channels and provide more choice on the bandwidth, 20, 40, 80, 160Mhz</li>
+<li>The wider bandwidth, the faster data transmission rate<br><img src="https://metis.fi/wordpress/wp-content/uploads/2018/01/5GHz.png" alt="5GHz channels" title="5GHz channels"></li>
+<li>Providing a faster transmission rate</li>
+<li>But relative shorter distance and weaker penetration on obstacle</li>
+</ul>
+<hr>
+<h2 id="IEEE-standard"><a href="#IEEE-standard" class="headerlink" title="IEEE standard"></a>IEEE standard</h2><h3 id="802-11a"><a href="#802-11a" class="headerlink" title="802.11a"></a>802.11a</h3><ul>
+<li>5 GHz, 20 MHz</li>
+<li>54 Mbit/s</li>
+</ul>
+<h3 id="802-11b"><a href="#802-11b" class="headerlink" title="802.11b"></a>802.11b</h3><ul>
+<li>2.4 GHz, 20 MHz</li>
+<li>1, 2, 5.5, 11 Mb/s</li>
+</ul>
+<h3 id="802-11g"><a href="#802-11g" class="headerlink" title="802.11g"></a>802.11g</h3><ul>
+<li>2.4 GHz, 20 MHz</li>
+<li>6, 9, 12, 18, 24, 36, 48, 54 Mbit/s</li>
+<li>Compatible to 802.11b</li>
+</ul>
+<h3 id="802-11n"><a href="#802-11n" class="headerlink" title="802.11n"></a>802.11n</h3><ul>
+<li>aka Wi-Fi 4</li>
+<li>2.4/5 GHz, 20/40 MHz</li>
+<li>Support 4x4 MIMO</li>
+<li>20 MHz: up to 288.8 Mb/s</li>
+<li>40 MHz: up to 600 Mb/s</li>
+<li>Compatible to 802.11a/b/g</li>
+</ul>
+<h3 id="802-11ac"><a href="#802-11ac" class="headerlink" title="802.11ac"></a>802.11ac</h3><ul>
+<li>aka Wi-Fi 5</li>
+<li>Wave 1, Wave 2, IEEE</li>
+<li>5 GHz, 20/40/80 MHz, 3x3 MIMO</li>
+<li>Wave 2: MU-MIMO, 80+80/160 MHz, 3-4 MIMO</li>
+<li>20 MHz: up to 346.8 Mb/s</li>
+<li>40 MHz: up to 800 Mb/s</li>
+<li>80 MHz: up to 1733.2 Mb/s</li>
+<li>160 MHz: up to 3466.8 Mb/s</li>
+<li>IEEE: 8x8 MIMO</li>
+<li>160 Mhz: 6.9 Gb/s</li>
+</ul>
+<h3 id="802-11ax"><a href="#802-11ax" class="headerlink" title="802.11ax"></a>802.11ax</h3><ul>
+<li>aka Wi-FI 6</li>
+<li>2.4 and 5 GHz, incorporate 1 - 7 GHz</li>
+<li>Next generation</li>
+<li>160 MHz: 1201 Mb/s (Single spatial stream)</li>
+<li>Demo product up to 11 Gbit/s</li>
+</ul>
+<hr>
+<h2 id="Signal-Strength"><a href="#Signal-Strength" class="headerlink" title="Signal Strength"></a>Signal Strength</h2><ul>
+<li>in terms of mW</li>
+<li>RSSI (dBm)</li>
+<li>Noise floor (dBm)</li>
+<li>RSSI - Noise floor -&gt; SNR (Signal to Noise Ratio)</li>
+</ul>
+<h3 id="RSSI-Received-Signal-Strength-Indicator"><a href="#RSSI-Received-Signal-Strength-Indicator" class="headerlink" title="RSSI (Received Signal Strength Indicator)"></a>RSSI (Received Signal Strength Indicator)</h3><ul>
+<li>Non-linear indication<br><img src="https://shopdelta.eu/obrazki_art/dbm_img2_d.jpg" alt="equation of mW to dBm" title="mW_to_dBm"></li>
+<li>The higher the RSSI, the stronger the signal received</li>
+</ul>
+<h3 id="SNR-Signal-to-Noise-Ratio"><a href="#SNR-Signal-to-Noise-Ratio" class="headerlink" title="SNR (Signal to Noise Ratio)"></a>SNR (Signal to Noise Ratio)</h3><ul>
+<li>The higher the SNR, the more signal than noise</li>
+</ul>
+<hr>
+<h2 id="Wi-Fi-authentication"><a href="#Wi-Fi-authentication" class="headerlink" title="Wi-Fi authentication"></a>Wi-Fi authentication</h2><h3 id="WEP-Wired-Equivalent-Privacy"><a href="#WEP-Wired-Equivalent-Privacy" class="headerlink" title="WEP (Wired Equivalent Privacy)"></a>WEP (Wired Equivalent Privacy)</h3><ul>
+<li>PSK (Pre Shared key) for all clients</li>
+<li>40 bit -&gt; 104-bit key (US gov restrictions)</li>
+<li>Combined with a 24-bit initialization vector</li>
+<li>Easy to crack</li>
+</ul>
+<h3 id="WAP-Wi-Fi-Protected-Access"><a href="#WAP-Wi-Fi-Protected-Access" class="headerlink" title="WAP (Wi-Fi Protected Access)"></a>WAP (Wi-Fi Protected Access)</h3><ul>
+<li>Interim standard</li>
+<li>Same alogrithm to WEP but using TKIP (Temporal Key Integrity Protocol)</li>
+<li>256 bits keys, per-packet key mixing, unique key for each packet</li>
+<li>automatic broadcast of updated keys</li>
+<li>message integrity check</li>
+<li>Larger IV size (48 bits)</li>
+<li>Personal mode, PSK</li>
+<li>Enterprise mode, EAP (Extensible Authentication Protocol) with 802.1x</li>
+<li>Enterprise mode required an authenticatioin server</li>
+</ul>
+<h3 id="WAP2-Wi-Fi-Protected-Access-II"><a href="#WAP2-Wi-Fi-Protected-Access-II" class="headerlink" title="WAP2 (Wi-Fi Protected Access II)"></a>WAP2 (Wi-Fi Protected Access II)</h3><ul>
+<li>AES (Advanced Encryption Standard) and Counter Mode with (Cipher Block Chaining Message Authentication Code Protocol)</li>
+<li>Support TKIP as a fallback</li>
+<li>Seamless roaming, allowing client to move between AP on same network without having reauthtication</li>
+<li>Use of Pairwise Master Key caching or preauthentication</li>
+<li>Personal mode, PSK</li>
+<li>Enterprise mode, EAP with 802.1x</li>
+</ul>
+<p><img src="https://cdn.ttgtmedia.com/rms/onlineImages/wirelesssec_chart.PNG" alt="Wi-Fi_auth_method" title="Wi-Fi_auth_method"></p>
+<h3 id="802-1x"><a href="#802-1x" class="headerlink" title="802.1x"></a>802.1x</h3><ul>
+<li>Authenticator and Authentication Server</li>
+<li>Only allow client to connect the network after authenticate by Authenticator</li>
+</ul>
+<hr>
+<h2 id="Major-Wi-FI-solution-vendor"><a href="#Major-Wi-FI-solution-vendor" class="headerlink" title="Major Wi-FI solution vendor"></a>Major Wi-FI solution vendor</h2><h3 id="Aruba"><a href="#Aruba" class="headerlink" title="Aruba"></a>Aruba</h3><ul>
+<li>AirWave for management</li>
+<li>Better on managing multiple different security profiles across different location, Clearpass</li>
+<li>Has decent switches which can use to control different AP</li>
+<li>More focus on the security issue</li>
+<li>Mor enterprise support capailities</li>
+</ul>
+<h3 id="Ruckus"><a href="#Ruckus" class="headerlink" title="Ruckus"></a>Ruckus</h3><ul>
+<li>Unleashed &amp; Unleashed Multi-Site Manager (UMM)</li>
+<li>Easy to configure and monitor</li>
+<li>Cheaper than Aruba</li>
+<li>Only focus on wireless </li>
+<li>Focus on the user interface, the ease to control their product</li>
+<li>ZoneDirectors do not have integrated RADIUS servers</li>
+</ul>
+<h3 id="Cisco"><a href="#Cisco" class="headerlink" title="Cisco"></a>Cisco</h3><ul>
+<li>Complicated to configure than Ruckus</li>
+<li>More to cover an area</li>
+<li>Better migrate with the wired components</li>
+</ul>
+<hr>
+<h2 id="Thin-AP-vs-Fat-AP"><a href="#Thin-AP-vs-Fat-AP" class="headerlink" title="Thin AP vs Fat AP"></a>Thin AP vs Fat AP</h2><h3 id="Thin-AP"><a href="#Thin-AP" class="headerlink" title="Thin AP"></a>Thin AP</h3><ul>
+<li>Transmission only</li>
+<li>Controlled by switch, centralized control</li>
+<li>Bottleneck on controller</li>
+<li>Do not even perform WLAN encryption</li>
+<li>Keeps APS simple and avoiding the necessity to upgrade their hard or software</li>
+</ul>
+<h3 id="Fat-AP"><a href="#Fat-AP" class="headerlink" title="Fat AP"></a>Fat AP</h3><ul>
+<li>Each AP is an addressable node in the network with its own IP address on its interfaces</li>
+<li>Can operate without any controller device</li>
+<li>SNMP (Simple Network Management Protocol) or HTTP to manage APs</li>
+<li>Complex and costly</li>
+</ul>
+<hr>
+<h2 id="DNS-DHCP-Gateway-Speed-Test"><a href="#DNS-DHCP-Gateway-Speed-Test" class="headerlink" title="DNS, DHCP, Gateway, Speed Test"></a>DNS, DHCP, Gateway, Speed Test</h2><h3 id="DNS-Domain-Name-System"><a href="#DNS-Domain-Name-System" class="headerlink" title="DNS (Domain Name System)"></a>DNS (Domain Name System)</h3><ul>
+<li>Hierarchical decentralized nameing system</li>
+<li>Translate between ip address and domain name</li>
+<li>FQDN (Fully Qualified Domain Name)<br><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Example_of_an_iterative_DNS_resolver.svg/563px-Example_of_an_iterative_DNS_resolver.svg.png" alt="DNS resolver" title="DNS resolver"></li>
+</ul>
+<h3 id="DHCP-Dynamic-Host-Configuration-Protocol"><a href="#DHCP-Dynamic-Host-Configuration-Protocol" class="headerlink" title="DHCP (Dynamic Host Configuration Protocol)"></a>DHCP (Dynamic Host Configuration Protocol)</h3><ul>
+<li>UDP/IP</li>
+<li><ol>
+<li>Client send a broadcast DHCPDISCOVER message</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>DHCP Server send a broadcast DHCPOFFER message</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>Client send a unicast DHCPREQUEST message to DHCP</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>DHCP Server send a unicast DHCPACK message to Client</li>
+</ol>
+</li>
+</ul>
+<h3 id="Gateway"><a href="#Gateway" class="headerlink" title="Gateway"></a>Gateway</h3><ul>
+<li>Connecting two deivce</li>
+<li>Similar to proxy</li>
+<li>May communicate with different protocol</li>
+<li>IP Gateway in router -&gt; transmitting data in different network</li>
+</ul>
+<h3 id="Speed-Test"><a href="#Speed-Test" class="headerlink" title="Speed Test"></a>Speed Test</h3><ul>
+<li>Throught sending some packets and measure the response time and loss</li>
+<li>Check the current network performance</li>
+</ul>
+<hr>
+<h2 id="Power-Over-Ethernet"><a href="#Power-Over-Ethernet" class="headerlink" title="Power Over Ethernet"></a>Power Over Ethernet</h2><ul>
+<li>Pass electric power along with data on twisted pair Ethernet cabling</li>
+<li>Single cable to provide data and electricity to devices such as AP, IP cameras, VoIP phones</li>
+</ul>
+<hr>
+<h2 id="Wi-Fi-interference"><a href="#Wi-Fi-interference" class="headerlink" title="Wi-Fi interference"></a>Wi-Fi interference</h2><h3 id="Channel"><a href="#Channel" class="headerlink" title="Channel"></a>Channel</h3><ul>
+<li>The radio signal should transmit in different channels</li>
+<li>Reserved some gaps</li>
+<li>Some other devices are using 2.4 GHz, e.g. bluetooth</li>
+</ul>
+<h3 id="Materials"><a href="#Materials" class="headerlink" title="Materials"></a>Materials</h3><ul>
+<li>Materials can affect Wi-Fi performance</li>
+<li>Avoid barriers</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Type of Barrier</th>
+<th>Interference Potential</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wood</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Synthetic material</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Glass</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Water</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Bricks</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Marble</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Plaster</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Concrete</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Bulletproof glass</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Metal</td>
+<td>Very High</td>
+</tr>
+</tbody>
+</table>
+<hr>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/learning/" rel="tag"># learning</a>
+          
+            <a href="/tags/Wi-Fi/" rel="tag"># Wi-Fi</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/16/Cloud-Server-Service-Monitoring/" rel="next" title="Cloud Server & Service Monitoring">
+                <i class="fa fa-chevron-left"></i> Cloud Server & Service Monitoring
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Tommy Tang">
+            
+              <p class="site-author-name" itemprop="name">Tommy Tang</p>
+              <p class="site-description motion-element" itemprop="description">I'm Tommy Tang. I like to solve puzzles. Fascinated in programming and problem-solving.</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/tommycmt" title="GitHub &rarr; https://github.com/tommycmt" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#WLAN-Channel"><span class="nav-number">1.</span> <span class="nav-text">WLAN Channel</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-GHz"><span class="nav-number">1.1.</span> <span class="nav-text">2.4 GHz</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-GHz"><span class="nav-number">1.2.</span> <span class="nav-text">5 GHz</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IEEE-standard"><span class="nav-number">2.</span> <span class="nav-text">IEEE standard</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#802-11a"><span class="nav-number">2.1.</span> <span class="nav-text">802.11a</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#802-11b"><span class="nav-number">2.2.</span> <span class="nav-text">802.11b</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#802-11g"><span class="nav-number">2.3.</span> <span class="nav-text">802.11g</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#802-11n"><span class="nav-number">2.4.</span> <span class="nav-text">802.11n</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#802-11ac"><span class="nav-number">2.5.</span> <span class="nav-text">802.11ac</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#802-11ax"><span class="nav-number">2.6.</span> <span class="nav-text">802.11ax</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Signal-Strength"><span class="nav-number">3.</span> <span class="nav-text">Signal Strength</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#RSSI-Received-Signal-Strength-Indicator"><span class="nav-number">3.1.</span> <span class="nav-text">RSSI (Received Signal Strength Indicator)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SNR-Signal-to-Noise-Ratio"><span class="nav-number">3.2.</span> <span class="nav-text">SNR (Signal to Noise Ratio)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Wi-Fi-authentication"><span class="nav-number">4.</span> <span class="nav-text">Wi-Fi authentication</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#WEP-Wired-Equivalent-Privacy"><span class="nav-number">4.1.</span> <span class="nav-text">WEP (Wired Equivalent Privacy)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WAP-Wi-Fi-Protected-Access"><span class="nav-number">4.2.</span> <span class="nav-text">WAP (Wi-Fi Protected Access)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WAP2-Wi-Fi-Protected-Access-II"><span class="nav-number">4.3.</span> <span class="nav-text">WAP2 (Wi-Fi Protected Access II)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#802-1x"><span class="nav-number">4.4.</span> <span class="nav-text">802.1x</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Major-Wi-FI-solution-vendor"><span class="nav-number">5.</span> <span class="nav-text">Major Wi-FI solution vendor</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Aruba"><span class="nav-number">5.1.</span> <span class="nav-text">Aruba</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ruckus"><span class="nav-number">5.2.</span> <span class="nav-text">Ruckus</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cisco"><span class="nav-number">5.3.</span> <span class="nav-text">Cisco</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Thin-AP-vs-Fat-AP"><span class="nav-number">6.</span> <span class="nav-text">Thin AP vs Fat AP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Thin-AP"><span class="nav-number">6.1.</span> <span class="nav-text">Thin AP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fat-AP"><span class="nav-number">6.2.</span> <span class="nav-text">Fat AP</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DNS-DHCP-Gateway-Speed-Test"><span class="nav-number">7.</span> <span class="nav-text">DNS, DHCP, Gateway, Speed Test</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DNS-Domain-Name-System"><span class="nav-number">7.1.</span> <span class="nav-text">DNS (Domain Name System)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DHCP-Dynamic-Host-Configuration-Protocol"><span class="nav-number">7.2.</span> <span class="nav-text">DHCP (Dynamic Host Configuration Protocol)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Gateway"><span class="nav-number">7.3.</span> <span class="nav-text">Gateway</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Speed-Test"><span class="nav-number">7.4.</span> <span class="nav-text">Speed Test</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Power-Over-Ethernet"><span class="nav-number">8.</span> <span class="nav-text">Power Over Ethernet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Wi-Fi-interference"><span class="nav-number">9.</span> <span class="nav-text">Wi-Fi interference</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Channel"><span class="nav-number">9.1.</span> <span class="nav-text">Channel</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Materials"><span class="nav-number">9.2.</span> <span class="nav-text">Materials</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Tommy Tang</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v6.7.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=6.7.0"></script>
+
+  <script src="/js/src/motion.js?v=6.7.0"></script>
+
+
+
+  
+  
+
+  
+  <script src="/js/src/scrollspy.js?v=6.7.0"></script>
+<script src="/js/src/post-details.js?v=6.7.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=6.7.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
