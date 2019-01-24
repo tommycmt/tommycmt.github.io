@@ -96,19 +96,19 @@
 
 
 
-  <meta name="description" content="This is a simple template for sending requests.">
-<meta name="keywords" content="Python,RESTful">
+  <meta name="description" content="Simple Script to log chat history in Whatsapp Web.">
+<meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Scala Enterprise API Request template">
-<meta property="og:url" content="http://tommycmt.github.io/2019/01/23/Scala-Enterprise-API-Request-template/index.html">
+<meta property="og:title" content="Capturing chat content in Whatsapp Web">
+<meta property="og:url" content="http://tommycmt.github.io/2019/01/24/Capturing-chat-content-in-Whatsapp-Web/index.html">
 <meta property="og:site_name" content="Tommy&#39;s blog">
-<meta property="og:description" content="This is a simple template for sending requests.">
+<meta property="og:description" content="Simple Script to log chat history in Whatsapp Web.">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://tommycmt.github.io/images/meta_welcome.png">
-<meta property="og:updated_time" content="2019-01-23T09:32:49.745Z">
+<meta property="og:updated_time" content="2019-01-24T08:24:56.610Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Scala Enterprise API Request template">
-<meta name="twitter:description" content="This is a simple template for sending requests.">
+<meta name="twitter:title" content="Capturing chat content in Whatsapp Web">
+<meta name="twitter:description" content="Simple Script to log chat history in Whatsapp Web.">
 <meta name="twitter:image" content="http://tommycmt.github.io/images/meta_welcome.png">
 
 
@@ -116,7 +116,7 @@
 
 
 
-  <link rel="canonical" href="http://tommycmt.github.io/2019/01/23/Scala-Enterprise-API-Request-template/">
+  <link rel="canonical" href="http://tommycmt.github.io/2019/01/24/Capturing-chat-content-in-Whatsapp-Web/">
 
 
 
@@ -126,7 +126,7 @@
   };
 </script>
 
-  <title>Scala Enterprise API Request template | Tommy's blog</title>
+  <title>Capturing chat content in Whatsapp Web | Tommy's blog</title>
   
 
 
@@ -325,7 +325,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tommycmt.github.io/2019/01/23/Scala-Enterprise-API-Request-template/">
+    <link itemprop="mainEntityOfPage" href="http://tommycmt.github.io/2019/01/24/Capturing-chat-content-in-Whatsapp-Web/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tommy Tang">
@@ -342,7 +342,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Scala Enterprise API Request template
+          <h1 class="post-title" itemprop="name headline">Capturing chat content in Whatsapp Web
 
               
             
@@ -368,7 +368,7 @@
                 
               
 
-              <time title="Created: 2019-01-23 17:31:20 / Modified: 17:32:49" itemprop="dateCreated datePublished" datetime="2019-01-23T17:31:20+08:00">2019-01-23</time>
+              <time title="Created: 2019-01-24 16:18:28 / Modified: 16:24:56" itemprop="dateCreated datePublished" datetime="2019-01-24T16:18:28+08:00">2019-01-24</time>
             
 
             
@@ -406,8 +406,13 @@
       
 
       
-        <p>This is a simple template for sending requests.<br><a id="more"></a></p>
-<h2 id="Requests-Template"><a href="#Requests-Template" class="headerlink" title="Requests Template:"></a>Requests Template:</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">from</span> pprint <span class="keyword">import</span> pprint</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ScalaAPIRequest</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, url, header, payload, method)</span>:</span></span><br><span class="line">        self.url = url</span><br><span class="line">        self.header = header</span><br><span class="line">        self.payload = payload</span><br><span class="line">        self.method = method</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">send</span><span class="params">(self)</span>:</span></span><br><span class="line">        payload = json.dumps(self.payload)</span><br><span class="line">        <span class="keyword">if</span> (self.method == <span class="string">"get"</span>):</span><br><span class="line">            res = requests.get(self.url, headers=self.header, data=payload)</span><br><span class="line">        <span class="keyword">elif</span> (self.method == <span class="string">"post"</span>):</span><br><span class="line">            res = requests.post(self.url, headers=self.header, data=payload)</span><br><span class="line">        self.res = res</span><br><span class="line">        self.res_content = json.loads(res.content.decode(<span class="string">"utf-8"</span>))</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">show_result</span><span class="params">(self)</span>:</span></span><br><span class="line">        pprint(self.res_content, indent=<span class="number">2</span>)</span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_content</span><span class="params">(self, key)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.res_content[key]</span><br></pre></td></tr></table></figure>
+        <p>Simple Script to log chat history in Whatsapp Web.<br><a id="more"></a></p>
+<h2 id="Limitaion"><a href="#Limitaion" class="headerlink" title="Limitaion"></a>Limitaion</h2><ol>
+<li>Can only monitor the active group</li>
+<li>Not working after changed active group, refresh and run the scripts again</li>
+</ol>
+<h2 id="Scripts"><a href="#Scripts" class="headerlink" title="Scripts"></a>Scripts</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> gObserver = [];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> observeDOM = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> MutationObserver = <span class="built_in">window</span>.MutationObserver || <span class="built_in">window</span>.WebKitMutationObserver;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"> obj, callback </span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>( !obj || !obj.nodeType === <span class="number">1</span> ) <span class="keyword">return</span>; <span class="comment">// validation</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>( MutationObserver )&#123;</span><br><span class="line">      <span class="comment">// define a new observer</span></span><br><span class="line">      <span class="keyword">var</span> obs = <span class="keyword">new</span> MutationObserver(<span class="function"><span class="keyword">function</span>(<span class="params">mutations, observer</span>)</span>&#123;</span><br><span class="line">			gObserver.push(observer);</span><br><span class="line">			callback(mutations, observer);</span><br><span class="line">      &#125;)</span><br><span class="line"></span><br><span class="line">      <span class="comment">// have the observer observe foo for changes in children</span></span><br><span class="line">      obs.observe( obj, &#123; <span class="attr">childList</span>:<span class="literal">true</span>, <span class="attr">subtree</span>:<span class="literal">true</span> &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>( <span class="built_in">window</span>.addEventListener )&#123;</span><br><span class="line">      obj.addEventListener(<span class="string">'DOMNodeInserted'</span>, callback, <span class="literal">false</span>);</span><br><span class="line">      obj.addEventListener(<span class="string">'DOMNodeRemoved'</span>, callback, <span class="literal">false</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">observeDOM(<span class="built_in">document</span>.getElementById(<span class="string">"main"</span>).querySelector(<span class="string">".copyable-area div"</span>), <span class="function"><span class="keyword">function</span>(<span class="params">mutations, observer</span>) </span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.debug(mutations);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">var</span> index <span class="keyword">in</span> mutations) &#123;</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="keyword">if</span> (mutations[index].target == <span class="literal">undefined</span> || mutations[index].target.tagName != <span class="string">"DIV"</span>) &#123;</span><br><span class="line">				<span class="built_in">console</span>.debug(mutations[index]);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">var</span> message = mutations[index].addedNodes[<span class="number">0</span>];</span><br><span class="line">			<span class="keyword">var</span> newMessage = message.querySelector(<span class="string">".copyable-text"</span>);</span><br><span class="line">			<span class="keyword">var</span> preText = newMessage.getAttribute(<span class="string">"data-pre-plain-text"</span>)</span><br><span class="line">			<span class="keyword">var</span> text = <span class="string">""</span>;</span><br><span class="line">			</span><br><span class="line">			newMessage.querySelectorAll(<span class="string">".copyable-text"</span>).forEach(<span class="function"><span class="keyword">function</span>(<span class="params">key</span>) </span>&#123;</span><br><span class="line">				text += key.innerText || key.getAttribute(<span class="string">"data-plain-text"</span>) || <span class="string">""</span>;</span><br><span class="line">			&#125;)</span><br><span class="line">			<span class="built_in">console</span>.info(<span class="string">"Adding: "</span>+ preText + <span class="string">"\n"</span>+ text);	</span><br><span class="line">		&#125; <span class="keyword">catch</span>(er) &#123;</span><br><span class="line">			<span class="keyword">try</span> &#123;</span><br><span class="line">				<span class="built_in">console</span>.debug(er);</span><br><span class="line">				<span class="keyword">if</span> (mutations[index].target == <span class="literal">undefined</span> || mutations[index].target.tagName != <span class="string">"DIV"</span>) &#123;</span><br><span class="line">					<span class="built_in">console</span>.debug(mutations[index]);</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">if</span> (mutations[index].addedNode == <span class="literal">undefined</span>) &#123;</span><br><span class="line">					<span class="keyword">var</span> message = mutations[index].removedNodes[<span class="number">0</span>];</span><br><span class="line">					<span class="keyword">var</span> newMessage = message.querySelector(<span class="string">".copyable-text"</span>);</span><br><span class="line">					<span class="keyword">var</span> preText = newMessage.getAttribute(<span class="string">"data-pre-plain-text"</span>)</span><br><span class="line">					<span class="keyword">var</span> text = <span class="string">""</span>;</span><br><span class="line">					</span><br><span class="line">					newMessage.querySelectorAll(<span class="string">".copyable-text"</span>).forEach(<span class="function"><span class="keyword">function</span>(<span class="params">key</span>) </span>&#123;</span><br><span class="line">						text += key.innerText || key.getAttribute(<span class="string">"data-plain-text"</span>);</span><br><span class="line">					&#125;)</span><br><span class="line">					<span class="built_in">console</span>.info(<span class="string">"Removeing: "</span>+ preText + <span class="string">"\n"</span>+ text);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125; <span class="keyword">catch</span>(err) &#123;</span><br><span class="line">				<span class="built_in">console</span>.debug(err);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -431,9 +436,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Python/" rel="tag"># Python</a>
-          
-            <a href="/tags/RESTful/" rel="tag"># RESTful</a>
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
           
         </div>
       
@@ -446,8 +449,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/22/Merging-history-with-same-result/" rel="next" title="Merging history with same result">
-                <i class="fa fa-chevron-left"></i> Merging history with same result
+              <a href="/2019/01/23/Scala-Enterprise-API-Request-template/" rel="next" title="Scala Enterprise API Request template">
+                <i class="fa fa-chevron-left"></i> Scala Enterprise API Request template
               </a>
             
           </div>
@@ -455,10 +458,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/24/Capturing-chat-content-in-Whatsapp-Web/" rel="prev" title="Capturing chat content in Whatsapp Web">
-                Capturing chat content in Whatsapp Web <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -638,7 +637,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Requests-Template"><span class="nav-number">1.</span> <span class="nav-text">Requests Template:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Limitaion"><span class="nav-number">1.</span> <span class="nav-text">Limitaion</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Scripts"><span class="nav-number">2.</span> <span class="nav-text">Scripts</span></a></li></ol></div>
             
 
           </div>
