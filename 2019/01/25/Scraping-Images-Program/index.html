@@ -96,19 +96,19 @@
 
 
 
-  <meta name="description" content="This is a simple template for sending requests.">
-<meta name="keywords" content="Python,RESTful">
+  <meta name="description" content="This program is a template for scraping images.">
+<meta name="keywords" content="Python,web scraping">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Scala Enterprise API Request template">
-<meta property="og:url" content="http://tommycmt.github.io/2019/01/23/Scala-Enterprise-API-Request-template/index.html">
+<meta property="og:title" content="Scraping Images Program">
+<meta property="og:url" content="http://tommycmt.github.io/2019/01/25/Scraping-Images-Program/index.html">
 <meta property="og:site_name" content="Tommy&#39;s blog">
-<meta property="og:description" content="This is a simple template for sending requests.">
+<meta property="og:description" content="This program is a template for scraping images.">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://tommycmt.github.io/images/meta_welcome.png">
-<meta property="og:updated_time" content="2019-01-23T09:32:49.745Z">
+<meta property="og:updated_time" content="2019-01-25T09:30:45.642Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Scala Enterprise API Request template">
-<meta name="twitter:description" content="This is a simple template for sending requests.">
+<meta name="twitter:title" content="Scraping Images Program">
+<meta name="twitter:description" content="This program is a template for scraping images.">
 <meta name="twitter:image" content="http://tommycmt.github.io/images/meta_welcome.png">
 
 
@@ -116,7 +116,7 @@
 
 
 
-  <link rel="canonical" href="http://tommycmt.github.io/2019/01/23/Scala-Enterprise-API-Request-template/">
+  <link rel="canonical" href="http://tommycmt.github.io/2019/01/25/Scraping-Images-Program/">
 
 
 
@@ -126,7 +126,7 @@
   };
 </script>
 
-  <title>Scala Enterprise API Request template | Tommy's blog</title>
+  <title>Scraping Images Program | Tommy's blog</title>
   
 
 
@@ -325,7 +325,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tommycmt.github.io/2019/01/23/Scala-Enterprise-API-Request-template/">
+    <link itemprop="mainEntityOfPage" href="http://tommycmt.github.io/2019/01/25/Scraping-Images-Program/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tommy Tang">
@@ -342,7 +342,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Scala Enterprise API Request template
+          <h1 class="post-title" itemprop="name headline">Scraping Images Program
 
               
             
@@ -368,7 +368,7 @@
                 
               
 
-              <time title="Created: 2019-01-23 17:31:20 / Modified: 17:32:49" itemprop="dateCreated datePublished" datetime="2019-01-23T17:31:20+08:00">2019-01-23</time>
+              <time title="Created: 2019-01-25 17:16:33 / Modified: 17:30:45" itemprop="dateCreated datePublished" datetime="2019-01-25T17:16:33+08:00">2019-01-25</time>
             
 
             
@@ -406,9 +406,15 @@
       
 
       
-        <p>This is a simple template for sending requests.<br><a id="more"></a></p>
-<h2 id="Requests-Template"><a href="#Requests-Template" class="headerlink" title="Requests Template:"></a>Requests Template:</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">from</span> pprint <span class="keyword">import</span> pprint</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ScalaAPIRequest</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, url, header, payload, method)</span>:</span></span><br><span class="line">        self.url = url</span><br><span class="line">        self.header = header</span><br><span class="line">        self.payload = payload</span><br><span class="line">        self.method = method</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">send</span><span class="params">(self)</span>:</span></span><br><span class="line">        payload = json.dumps(self.payload)</span><br><span class="line">        <span class="keyword">if</span> (self.method == <span class="string">"get"</span>):</span><br><span class="line">            res = requests.get(self.url, headers=self.header, data=payload)</span><br><span class="line">        <span class="keyword">elif</span> (self.method == <span class="string">"post"</span>):</span><br><span class="line">            res = requests.post(self.url, headers=self.header, data=payload)</span><br><span class="line">        self.res = res</span><br><span class="line">        self.res_content = json.loads(res.content.decode(<span class="string">"utf-8"</span>))</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">show_result</span><span class="params">(self)</span>:</span></span><br><span class="line">        pprint(self.res_content, indent=<span class="number">2</span>)</span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_content</span><span class="params">(self, key)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.res_content[key]</span><br></pre></td></tr></table></figure>
-
+        <p>This program is a template for scraping images.</p>
+<a id="more"></a>
+<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><p>Specify the</p>
+<ol>
+<li>URL</li>
+<li>CSS_SELECTOR for images</li>
+<li>HTML tag attribute of those images</li>
+</ol>
+<h2 id="Program"><a href="#Program" class="headerlink" title="Program"></a>Program</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"></span><br><span class="line">URL = <span class="string">"https://www.ABC.com/"</span></span><br><span class="line">CSS_SELECTOR = <span class="string">"#TARGET_ID"</span></span><br><span class="line">IMAGE_URL = <span class="string">"src"</span></span><br><span class="line"></span><br><span class="line">res = requests.get(URL)</span><br><span class="line">bsoup = BeautifulSoup(res.text, <span class="string">"html.parser"</span>)</span><br><span class="line">tags = bsoup.select(CSS_SELECTOR)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(tags)):</span><br><span class="line">  <span class="keyword">with</span> open(str(i) + <span class="string">".jpg"</span>, <span class="string">"wb"</span>) <span class="keyword">as</span> f:</span><br><span class="line">    doc = requests.get(tags[i].get(IMAGE_URL))</span><br><span class="line">    f.write(doc.content)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -433,7 +439,7 @@
           
             <a href="/tags/Python/" rel="tag"># Python</a>
           
-            <a href="/tags/RESTful/" rel="tag"># RESTful</a>
+            <a href="/tags/web-scraping/" rel="tag"># web scraping</a>
           
         </div>
       
@@ -446,8 +452,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/22/Merging-history-with-same-result/" rel="next" title="Merging history with same result">
-                <i class="fa fa-chevron-left"></i> Merging history with same result
+              <a href="/2019/01/24/Capturing-chat-content-in-Whatsapp-Web/" rel="next" title="Capturing chat content in Whatsapp Web">
+                <i class="fa fa-chevron-left"></i> Capturing chat content in Whatsapp Web
               </a>
             
           </div>
@@ -455,10 +461,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/24/Capturing-chat-content-in-Whatsapp-Web/" rel="prev" title="Capturing chat content in Whatsapp Web">
-                Capturing chat content in Whatsapp Web <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -638,7 +640,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Requests-Template"><span class="nav-number">1.</span> <span class="nav-text">Requests Template:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Usage"><span class="nav-number">1.</span> <span class="nav-text">Usage</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Program"><span class="nav-number">2.</span> <span class="nav-text">Program</span></a></li></ol></div>
             
 
           </div>
