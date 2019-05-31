@@ -344,6 +344,197 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://tommycmt.github.io/2019/05/31/ACAEngine-Study-Note/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tommy Tang">
+      <meta itemprop="description" content="I'm Tommy Tang. I like to solve puzzles. Fascinated in programming and problem-solving.">
+      <meta itemprop="image" content="/images/meta_welcome.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tommy's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/31/ACAEngine-Study-Note/" class="post-title-link" itemprop="url">ACAEngine Study Note</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-05-31 16:32:37 / Modified: 18:17:31" itemprop="dateCreated datePublished" datetime="2019-05-31T16:32:37+08:00">2019-05-31</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>ACAEngine is a platform for creating digital experiences for physical environments. It connects devices, hardware systems and thir-party software to provide an API for the built environment.</p>
+<h1 id="ACA-Engine"><a href="#ACA-Engine" class="headerlink" title="ACA Engine"></a>ACA Engine</h1><h2 id="What-is-ACAEngine"><a href="#What-is-ACAEngine" class="headerlink" title="What is ACAEngine"></a>What is ACAEngine</h2><ul>
+<li>Software only built on the modern web</li>
+<li>Open source continuously improved and backed by a full-time team of developers</li>
+<li>Extensible able to run stand-alone, or intergrated into staff, build or third party apps</li>
+<li>Vendor agnostic designed to bridge multiple disparate systems</li>
+<li>Scale-able from rooms, to buildings, to precincts</li>
+<li>Distributed multi-node replication for live backup and fail-over</li>
+<li>Secure audit-able interaction with the physical environment and encrypted devices communication</li>
+<li>Insightful provides analytics for physical systems</li>
+</ul>
+<p>Focusing on devices logic more than low level device communication and connection.</p>
+<p>Intergrating tens of thousands of devices and services into unique experiences.</p>
+<h2 id="Key-Concepts"><a href="#Key-Concepts" class="headerlink" title="Key Concepts"></a>Key Concepts</h2><h3 id="1-Drivers"><a href="#1-Drivers" class="headerlink" title="1. Drivers"></a>1. Drivers</h3><ul>
+<li>Communcication with external system, device and service drivers</li>
+<li>coordinate actions across modules and build complex behaviours (logic drivers)</li>
+<li>All drives must be instantiated as modules before they can be used<br><img src="https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LXbPMSOmjepiJyvIzWf%2F-LeKAy4l4riY5ft-l9fv%2F-LeK5oo5NehpRAF1MLPe%2Fconcepts-drivers.svg?alt=media" alt="ACAEngine Driver" title="ACAEngine Driver"></li>
+</ul>
+<h3 id="2-Modules"><a href="#2-Modules" class="headerlink" title="2. Modules"></a>2. Modules</h3><p>Modules are instances of drivers. These represent a device to be controlled, service integration or piece of logic that controls how a system should behave.</p>
+<blockquote>
+<p>Modules were referred to as ‘Devices’ in older versions of ACAEngine.</p>
+</blockquote>
+<ul>
+<li>State - status info about the device, service or high level logic (e.g. power status)</li>
+<li>Behavior - actions whichh they can execute</li>
+</ul>
+<p>Once a module is started, ACAEngine will attempt to connect to the associated physical device or service and keep track of its status.<br>It will disconnect from that device and stop send commands if it is stopped.</p>
+<p>Modules must be associated with at least one system. Same instance can be shared across everywhere it is needed.</p>
+<h3 id="3-Systems"><a href="#3-Systems" class="headerlink" title="3. Systems"></a>3. Systems</h3><p>System is a collection of modules, setting and basic metadata. They provide the main logical building blocks within ACAEngine deployments.<br><img src="https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LXbPMSOmjepiJyvIzWf%2F-LeJgKU2wtXLO2-R5TBW%2F-LeJgNwvu3yRHgUe6sss%2Fconcepts-system.svg?alt=media" alt="ACAEngine Systems" title="ACAEngine Systems"></p>
+<p>Systems often represent physical spaces but can also represent standalone items (e.g. digital signage endpoint) or non-physical system with information based inputs and outputs.</p>
+<h3 id="4-Zones"><a href="#4-Zones" class="headerlink" title="4. Zones"></a>4. Zones</h3><p>Zones are collections of systems. A system can be tagged as a member of any number of zones.</p>
+<p><img src="https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LXbPMSOmjepiJyvIzWf%2F-LZZ2VxMcWDN260xsu4a%2F-LZZ3h3uyjW3MAURDd1v%2Fconcepts-zone.svg?alt=media" alt="ACAEngine Zones" title="ACAEngine Zones"></p>
+<ul>
+<li>Logical groupings of systems with common traits (such as those in the same building, or of the same basic type)</li>
+<li>A point to define settings that compose across systems</li>
+</ul>
+<h3 id="5-Settings"><a href="#5-Settings" class="headerlink" title="5. Settings"></a>5. Settings</h3><p>Settings are the configuration info that define how an ACAEngine deployment should behave. They are ultimately ingested and used by modules, but can be defined against zones, system, driver or modules and compose to create an overall system configuration that can be managed at scale.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">"key"</span>: <span class="string">"value"</span>,</span><br><span class="line">  <span class="string">"foo"</span>: [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>],</span><br><span class="line">  <span class="string">"bar"</span>: <span class="literal">true</span> </span><br><span class="line">  <span class="string">"baz"</span>: &#123; </span><br><span class="line">    <span class="string">"qux"</span>: <span class="number">1.234</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>JSON is a common, simple data-interchange format that is designed to be easy for humans to read and write, and for machines to parse and generate. If it is a new concept, you can learn more here.</p>
+</blockquote>
+<p>The naming and expected values are defined within drivers and will vary based on the integrations in use within each deployment</p>
+<h4 id="Settings-lookup"><a href="#Settings-lookup" class="headerlink" title="Settings lookup"></a>Settings lookup</h4><p>To simplify large deployments, standardise systems and reduce management overhead, settings are designed to be defined at different layers which then combine to produce the final configuration.</p>
+<p>Settings defined on a zone are inherited by all systems in that zone.</p>
+<p>Similarly, settings defined on a driver are inherited by all modules created from it.</p>
+<p><img src="https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LXbPMSOmjepiJyvIzWf%2F-LeKqvbt5TB7qTOU6ZjZ%2F-LeKr_GiDA6etXWbQjgn%2Fconcepts-settings.svg?alt=media" alt="ACAEngine Settings" title="ACAEngine Settings"></p>
+<p>When settings are inherited from a zone or driver they will be aggregated with any settings defined directly on a system or module. If an inherited setting has the same key as one that is defined specifically for that system/module, the latter will override the inherited attribute. This allows a general config to be applied at the highest ‘shared’ point of a system, with more specific configuration applied on a system or individual module basis.</p>
+<h3 id="6-Interfaces"><a href="#6-Interfaces" class="headerlink" title="6. Interfaces"></a>6. Interfaces</h3><p>Interfaces are web pages or native apps that provide users with a direct method of interaction with an ACAEgnine instance. Common examples of these are a staff app, control UI, booking system or other experiences that lend themselves to screen-based interaction</p>
+<h3 id="7-Triggers"><a href="#7-Triggers" class="headerlink" title="7. Triggers"></a>7. Triggers</h3><p>Triggers provide the abiity to dynamically link state and behaviour across different modules. They are used to define actions that fire based on a certain system state, time, or external input from a webhook.</p>
+<p>Using backoffice it’s possible to create, assign and manage triggers to build event driven behaviour that accompanies core system logic.</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://tommycmt.github.io/2019/03/18/Income-Statement/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1673,154 +1864,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tommycmt.github.io/2019/01/23/Scala-Enterprise-API-Request-template/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tommy Tang">
-      <meta itemprop="description" content="I'm Tommy Tang. I like to solve puzzles. Fascinated in programming and problem-solving.">
-      <meta itemprop="image" content="/images/meta_welcome.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tommy's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/01/23/Scala-Enterprise-API-Request-template/" class="post-title-link" itemprop="url">Scala Enterprise API Request template</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-01-23 17:31:20 / Modified: 17:32:49" itemprop="dateCreated datePublished" datetime="2019-01-23T17:31:20+08:00">2019-01-23</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>This is a simple template for sending requests.<br>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/01/23/Scala-Enterprise-API-Request-template/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </p></div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1870,7 +1913,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-count">18</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1931,7 +1974,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">23</span>
+                      
+                    
+                    <span class="site-state-item-count">24</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
