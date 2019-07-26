@@ -107,7 +107,7 @@
 <meta property="og:description" content="Ansible">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://tommycmt.github.io/images/meta_welcome.png">
-<meta property="og:updated_time" content="2019-07-26T03:28:22.594Z">
+<meta property="og:updated_time" content="2019-07-26T03:32:18.971Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ansible Training">
 <meta name="twitter:description" content="Ansible">
@@ -387,7 +387,7 @@
                 
               
 
-              <time title="Created: 2019-07-26 10:14:25 / Modified: 11:28:22" itemprop="dateCreated datePublished" datetime="2019-07-26T10:14:25+08:00">2019-07-26</time>
+              <time title="Created: 2019-07-26 10:14:25 / Modified: 11:32:18" itemprop="dateCreated datePublished" datetime="2019-07-26T10:14:25+08:00">2019-07-26</time>
             
 
             
@@ -436,16 +436,15 @@
 </li>
 </ol>
 <h2 id="Basic-command"><a href="#Basic-command" class="headerlink" title="Basic command"></a>Basic command</h2><ol>
-<li>Create Inventory file, e.g. host</li>
-</ol>
+<li><p>Create Inventory file, e.g. host</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[webserver]</span></span><br><span class="line">host1 ansible_host=192.168.150.132</span><br><span class="line">host2 ansible_host=192.168.150.131</span><br></pre></td></tr></table></figure>
-<ol start="2">
+</li>
 <li><p>Run with specify inventory<br><code>ansible -i host host1 -m ping</code></p>
 </li>
 <li><p>Modify the config file for one off change</p>
 </li>
 <li><p>Ansible Playbook</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">- hosts:</span> <span class="string">webserver</span></span><br><span class="line"><span class="attr">  gather_facts:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">  become:</span> <span class="literal">true</span></span><br><span class="line">  </span><br><span class="line"><span class="attr">  tasks:</span></span><br><span class="line"><span class="attr">  - name:</span> <span class="string">install</span> <span class="string">th</span> <span class="string">latest</span> <span class="string">version</span> <span class="string">of</span> <span class="string">Apache</span></span><br><span class="line"><span class="attr">    yum:</span></span><br><span class="line"><span class="attr">      name:</span> <span class="string">httpd</span></span><br><span class="line"><span class="attr">      state:</span> <span class="string">absent</span></span><br><span class="line"><span class="attr">    register:</span> <span class="string">result</span></span><br><span class="line">    </span><br><span class="line"><span class="attr">  - debug:</span></span><br><span class="line"><span class="attr">      msg:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">''</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">- hosts:</span> <span class="string">webserver</span></span><br><span class="line"><span class="attr">  gather_facts:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">  become:</span> <span class="literal">true</span></span><br><span class="line">  </span><br><span class="line"><span class="attr">  tasks:</span></span><br><span class="line"><span class="attr">  - name:</span> <span class="string">install</span> <span class="string">th</span> <span class="string">latest</span> <span class="string">version</span> <span class="string">of</span> <span class="string">Apache</span></span><br><span class="line"><span class="attr">    yum:</span></span><br><span class="line"><span class="attr">      name:</span> <span class="string">httpd</span></span><br><span class="line"><span class="attr">      state:</span> <span class="string">absent</span></span><br><span class="line"><span class="attr">    register:</span> <span class="string">result</span></span><br><span class="line">    </span><br><span class="line"><span class="attr">  - debug:</span></span><br><span class="line"><span class="attr">      msg:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">'&amp;#123;&amp;#123;result&amp;#125;&amp;#125;'</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Run Ansible Playbook<br><code>ansible-playbook test_playbook</code></p>
 </li>
