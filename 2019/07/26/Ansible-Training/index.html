@@ -99,7 +99,7 @@
 
 
   <meta name="description" content="Ansible, a powerful DevOps tools for Automation. Installed Ansible in a management Node, can use SSH to connect devices to perform complex business logic.">
-<meta name="keywords" content="Python,learning,DevOps,YAML,Linux">
+<meta name="keywords" content="Python,learning,YAML,Linux,DevOps,Ansible">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ansible Training">
 <meta property="og:url" content="http://tommycmt.github.io/2019/07/26/Ansible-Training/index.html">
@@ -107,7 +107,7 @@
 <meta property="og:description" content="Ansible, a powerful DevOps tools for Automation. Installed Ansible in a management Node, can use SSH to connect devices to perform complex business logic.">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://tommycmt.github.io/images/meta_welcome.png">
-<meta property="og:updated_time" content="2019-07-26T04:35:52.249Z">
+<meta property="og:updated_time" content="2019-07-26T04:36:54.251Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ansible Training">
 <meta name="twitter:description" content="Ansible, a powerful DevOps tools for Automation. Installed Ansible in a management Node, can use SSH to connect devices to perform complex business logic.">
@@ -387,7 +387,7 @@
                 
               
 
-              <time title="Created: 2019-07-26 10:14:25 / Modified: 12:35:52" itemprop="dateCreated datePublished" datetime="2019-07-26T10:14:25+08:00">2019-07-26</time>
+              <time title="Created: 2019-07-26 10:14:25 / Modified: 12:36:54" itemprop="dateCreated datePublished" datetime="2019-07-26T10:14:25+08:00">2019-07-26</time>
             
 
             
@@ -460,8 +460,6 @@
 <li><p>Custom module</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">test_module.py</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> ansible.module_utils.basic <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">  module_args = dict(</span><br><span class="line">    a=dict(type=<span class="string">'str'</span>, required=<span class="keyword">True</span>),</span><br><span class="line">    b=dict(type=<span class="string">'str'</span>, required=<span class="keyword">True</span>),</span><br><span class="line">  )</span><br><span class="line"></span><br><span class="line">  module = AnsibleModule(</span><br><span class="line">    argument_spec=module_args,</span><br><span class="line">    supports_check_mode=<span class="keyword">True</span></span><br><span class="line">  )</span><br><span class="line"></span><br><span class="line">  a = module.params[<span class="string">'a'</span>]</span><br><span class="line">  b = module.params[<span class="string">'b'</span>]</span><br><span class="line"></span><br><span class="line">  response = &#123;</span><br><span class="line">    <span class="string">"tasks"</span>: &#123;</span><br><span class="line">      <span class="string">"key_b"</span>: b,</span><br><span class="line">      <span class="string">"key_a"</span>: a,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  module.exit_json(changed=<span class="keyword">True</span>, meta=response)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">  main()</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
-<ol start="4">
 <li><p>Run custom module with ad-hoc<br><code>ansible webserver -m test_module -a &quot;a=1 b=2&quot;</code></p>
 </li>
 <li><p>Run custom module inside playbook</p>
@@ -498,11 +496,13 @@
           
             <a href="/tags/learning/" rel="tag"># learning</a>
           
-            <a href="/tags/DevOps/" rel="tag"># DevOps</a>
-          
             <a href="/tags/YAML/" rel="tag"># YAML</a>
           
             <a href="/tags/Linux/" rel="tag"># Linux</a>
+          
+            <a href="/tags/DevOps/" rel="tag"># DevOps</a>
+          
+            <a href="/tags/Ansible/" rel="tag"># Ansible</a>
           
         </div>
       
@@ -666,7 +666,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">28</span>
+                      
+                    
+                    <span class="site-state-item-count">29</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
