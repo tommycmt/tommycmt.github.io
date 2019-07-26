@@ -107,7 +107,7 @@
 <meta property="og:description" content="Ansible">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://tommycmt.github.io/images/meta_welcome.png">
-<meta property="og:updated_time" content="2019-07-26T03:42:28.241Z">
+<meta property="og:updated_time" content="2019-07-26T03:45:10.137Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ansible Training">
 <meta name="twitter:description" content="Ansible">
@@ -387,7 +387,7 @@
                 
               
 
-              <time title="Created: 2019-07-26 10:14:25 / Modified: 11:42:28" itemprop="dateCreated datePublished" datetime="2019-07-26T10:14:25+08:00">2019-07-26</time>
+              <time title="Created: 2019-07-26 10:14:25 / Modified: 11:45:10" itemprop="dateCreated datePublished" datetime="2019-07-26T10:14:25+08:00">2019-07-26</time>
             
 
             
@@ -445,34 +445,52 @@
 </li>
 <li><p>Ansible Playbook</p>
 
+---
+- hosts: webserver
+  gather_facts: false
+  become: true
+  
+  tasks:
+  - name: install th latest version of Apache
+    yum:
+      name: httpd
+      state: absent
+    register: result
+    
+  - debug:
+      msg:
+      - '{{result}}'
+
 </li>
-</ol>
-<hr>
-<ul>
-<li><p>hosts: webserver<br>gather_facts: false<br>become: true</p>
-<p>tasks:</p>
-<ul>
-<li><p>name: install th latest version of Apache<br>yum:<br>  name: httpd<br>  state: absent<br>register: result</p>
-</li>
-<li><p>debug:<br>  msg:</p>
-<ul>
-<li>‘{{result}}‘{% raw %}
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<ol start="5">
 <li><p>Run Ansible Playbook<br><code>ansible-playbook test_playbook</code></p>
 </li>
 <li><p>Run add-hoc command<br><code>ansible webserver -m yum -a &quot;name=httpd state=absent&quot; --become</code></p>
 </li>
 </ol>
 <h2 id="Parameterize-Playbook"><a href="#Parameterize-Playbook" class="headerlink" title="Parameterize Playbook"></a>Parameterize Playbook</h2><ol>
-<li><h2 id="Ref"><a href="#Ref" class="headerlink" title="Ref"></a>Ref</h2></li>
+<li><p>Parameterzie Playbook</p>
+
+---
+- hosts: '{{device_name}}'
+  gather_facts: false
+  become: true
+  
+  tasks:
+  - name: install th latest version of Apache
+    yum:
+      name: httpd
+      state: absent
+    register: result
+    
+  - debug:
+      msg:
+      - '{{result}}'
+
+</li>
+<li><p>Run with specify parameters<br><code>ansible-playbook playbooks/test.yml --extra-var &#39;{&quot;device_name&quot;: [&quot;webserver&quot;]}&#39;</code></p>
+</li>
 </ol>
-<p>Ansible: <a href="https://www.ansible.com/" title="Ansible" target="_blank" rel="noopener">https://www.ansible.com/</a></p>
+<h2 id="Ref"><a href="#Ref" class="headerlink" title="Ref"></a>Ref</h2><p>Ansible: <a href="https://www.ansible.com/" title="Ansible" target="_blank" rel="noopener">https://www.ansible.com/</a></p>
 
       
     </div>
