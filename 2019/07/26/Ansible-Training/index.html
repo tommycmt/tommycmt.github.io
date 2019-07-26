@@ -99,7 +99,7 @@
 
 
   <meta name="description" content="Ansible">
-<meta name="keywords" content="Python,learning,IoT,YAML,Linux">
+<meta name="keywords" content="Python,IoT,learning,YAML,Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ansible Training">
 <meta property="og:url" content="http://tommycmt.github.io/2019/07/26/Ansible-Training/index.html">
@@ -107,7 +107,7 @@
 <meta property="og:description" content="Ansible">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://tommycmt.github.io/images/meta_welcome.png">
-<meta property="og:updated_time" content="2019-07-26T03:35:04.748Z">
+<meta property="og:updated_time" content="2019-07-26T03:38:47.516Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ansible Training">
 <meta name="twitter:description" content="Ansible">
@@ -387,7 +387,7 @@
                 
               
 
-              <time title="Created: 2019-07-26 10:14:25 / Modified: 11:35:04" itemprop="dateCreated datePublished" datetime="2019-07-26T10:14:25+08:00">2019-07-26</time>
+              <time title="Created: 2019-07-26 10:14:25 / Modified: 11:38:47" itemprop="dateCreated datePublished" datetime="2019-07-26T10:14:25+08:00">2019-07-26</time>
             
 
             
@@ -444,7 +444,7 @@
 <li><p>Modify the config file for one off change</p>
 </li>
 <li><p>Ansible Playbook</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">- hosts:</span> <span class="string">webserver</span></span><br><span class="line"><span class="attr">  gather_facts:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">  become:</span> <span class="literal">true</span></span><br><span class="line">  </span><br><span class="line"><span class="attr">  tasks:</span></span><br><span class="line"><span class="attr">  - name:</span> <span class="string">install</span> <span class="string">th</span> <span class="string">latest</span> <span class="string">version</span> <span class="string">of</span> <span class="string">Apache</span></span><br><span class="line"><span class="attr">    yum:</span></span><br><span class="line"><span class="attr">      name:</span> <span class="string">httpd</span></span><br><span class="line"><span class="attr">      state:</span> <span class="string">absent</span></span><br><span class="line"><span class="attr">    register:</span> <span class="string">result</span></span><br><span class="line">    </span><br><span class="line"><span class="attr">  - debug:</span></span><br><span class="line"><span class="attr">      msg:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">'\&#123;\&#123;result\&#125;\&#125;'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">- hosts:</span> <span class="string">webserver</span></span><br><span class="line"><span class="attr">  gather_facts:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">  become:</span> <span class="literal">true</span></span><br><span class="line">  </span><br><span class="line"><span class="attr">  tasks:</span></span><br><span class="line"><span class="attr">  - name:</span> <span class="string">install</span> <span class="string">th</span> <span class="string">latest</span> <span class="string">version</span> <span class="string">of</span> <span class="string">Apache</span></span><br><span class="line"><span class="attr">    yum:</span></span><br><span class="line"><span class="attr">      name:</span> <span class="string">httpd</span></span><br><span class="line"><span class="attr">      state:</span> <span class="string">absent</span></span><br><span class="line"><span class="attr">    register:</span> <span class="string">result</span></span><br><span class="line">    </span><br><span class="line"><span class="attr">  - debug:</span></span><br><span class="line"><span class="attr">      msg:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">'`&amp;#123;&amp;#123;`result`&amp;#125;&amp;#125;`'</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Run Ansible Playbook<br><code>ansible-playbook test_playbook</code></p>
 </li>
@@ -477,9 +477,9 @@
           
             <a href="/tags/Python/" rel="tag"># Python</a>
           
-            <a href="/tags/learning/" rel="tag"># learning</a>
-          
             <a href="/tags/IoT/" rel="tag"># IoT</a>
+          
+            <a href="/tags/learning/" rel="tag"># learning</a>
           
             <a href="/tags/YAML/" rel="tag"># YAML</a>
           
