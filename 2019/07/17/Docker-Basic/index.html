@@ -99,7 +99,7 @@
 
 
   <meta name="description" content="Installation Install Docker in CentOS  123456789sudo yum install -y yum-utils \  device-mapper-persistent-data \  lvm2    sudo yum-config-manager \  --add-repo \  https://download.docker.com/linux/ce">
-<meta name="keywords" content="practice,learning,YAML,DevOps,Docker">
+<meta name="keywords" content="practice,learning,Docker,DevOps,YAML">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Docker Basic">
 <meta property="og:url" content="http://tommycmt.github.io/2019/07/17/Docker-Basic/index.html">
@@ -107,7 +107,7 @@
 <meta property="og:description" content="Installation Install Docker in CentOS  123456789sudo yum install -y yum-utils \  device-mapper-persistent-data \  lvm2    sudo yum-config-manager \  --add-repo \  https://download.docker.com/linux/ce">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://tommycmt.github.io/images/meta_welcome.png">
-<meta property="og:updated_time" content="2019-08-07T10:03:41.985Z">
+<meta property="og:updated_time" content="2019-08-07T10:09:50.663Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker Basic">
 <meta name="twitter:description" content="Installation Install Docker in CentOS  123456789sudo yum install -y yum-utils \  device-mapper-persistent-data \  lvm2    sudo yum-config-manager \  --add-repo \  https://download.docker.com/linux/ce">
@@ -404,7 +404,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-08-07 18:03:41" itemprop="dateModified" datetime="2019-08-07T18:03:41+08:00">2019-08-07</time>
+                <time title="Modified: 2019-08-07 18:09:50" itemprop="dateModified" datetime="2019-08-07T18:09:50+08:00">2019-08-07</time>
               
             
           </span>
@@ -446,7 +446,8 @@
 <li>Post Install</li>
 </ol>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl <span class="built_in">enable</span> docker</span><br><span class="line">sudo systemctl start docker</span><br><span class="line"></span><br><span class="line">sudo usermod -aG docker <span class="variable">$USER</span></span><br><span class="line"></span><br><span class="line">docker ps</span><br><span class="line">docker run --rm hello-world</span><br><span class="line"></span><br><span class="line">sudo systemctl stop firewalld</span><br><span class="line">sudo systemctl start firewalld</span><br></pre></td></tr></table></figure>
-<figure class="highlight json"><figcaption><span>/etc/docker/daemon.json</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"registry-mirrors"</span>: [<span class="string">"http://192.168.11.211:5000"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Basic-command"><a href="#Basic-command" class="headerlink" title="Basic command"></a>Basic command</h2><figure class="highlight plain"><figcaption><span>build.sh</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -t simple-web-server .</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>deploy.sh</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker run --name my-web-server -d -p 3000:3000 simple-web-server</span><br><span class="line">docker logs -f my-web-server</span><br><span class="line">docker rm -f my-web-server</span><br></pre></td></tr></table></figure>
 <h2 id="Ref"><a href="#Ref" class="headerlink" title="Ref"></a>Ref</h2><p>Docker: <a href="https://www.docker.com/" title="Docker" target="_blank" rel="noopener">https://www.docker.com/</a></p>
 
       
@@ -475,11 +476,11 @@
           
             <a href="/tags/learning/" rel="tag"># learning</a>
           
-            <a href="/tags/YAML/" rel="tag"># YAML</a>
+            <a href="/tags/Docker/" rel="tag"># Docker</a>
           
             <a href="/tags/DevOps/" rel="tag"># DevOps</a>
           
-            <a href="/tags/Docker/" rel="tag"># Docker</a>
+            <a href="/tags/YAML/" rel="tag"># YAML</a>
           
         </div>
       
@@ -700,7 +701,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Installation"><span class="nav-number">1.</span> <span class="nav-text">Installation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ref"><span class="nav-number">2.</span> <span class="nav-text">Ref</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Installation"><span class="nav-number">1.</span> <span class="nav-text">Installation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Basic-command"><span class="nav-number">2.</span> <span class="nav-text">Basic command</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ref"><span class="nav-number">3.</span> <span class="nav-text">Ref</span></a></li></ol></div>
             
 
           </div>

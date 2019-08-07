@@ -554,7 +554,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-08-07 18:03:41" itemprop="dateModified" datetime="2019-08-07T18:03:41+08:00">2019-08-07</time>
+                <time title="Modified: 2019-08-07 18:09:50" itemprop="dateModified" datetime="2019-08-07T18:09:50+08:00">2019-08-07</time>
               
             
           </span>
@@ -598,7 +598,8 @@
 <li>Post Install</li>
 </ol>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl <span class="built_in">enable</span> docker</span><br><span class="line">sudo systemctl start docker</span><br><span class="line"></span><br><span class="line">sudo usermod -aG docker <span class="variable">$USER</span></span><br><span class="line"></span><br><span class="line">docker ps</span><br><span class="line">docker run --rm hello-world</span><br><span class="line"></span><br><span class="line">sudo systemctl stop firewalld</span><br><span class="line">sudo systemctl start firewalld</span><br></pre></td></tr></table></figure>
-<figure class="highlight json"><figcaption><span>/etc/docker/daemon.json</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"registry-mirrors"</span>: [<span class="string">"http://192.168.11.211:5000"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Basic-command"><a href="#Basic-command" class="headerlink" title="Basic command"></a>Basic command</h2><figure class="highlight plain"><figcaption><span>build.sh</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -t simple-web-server .</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>deploy.sh</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker run --name my-web-server -d -p 3000:3000 simple-web-server</span><br><span class="line">docker logs -f my-web-server</span><br><span class="line">docker rm -f my-web-server</span><br></pre></td></tr></table></figure>
 <h2 id="Ref"><a href="#Ref" class="headerlink" title="Ref"></a>Ref</h2><p>Docker: <a href="https://www.docker.com/" title="Docker" target="_blank" rel="noopener">https://www.docker.com/</a></p>
 
           
