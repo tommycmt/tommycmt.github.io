@@ -537,12 +537,24 @@
                 
               
 
-              <time title="Created: 2019-07-17 17:02:27 / Modified: 17:04:06" itemprop="dateCreated datePublished" datetime="2019-07-17T17:02:27+08:00">2019-07-17</time>
+              <time title="Created: 2019-07-17 17:02:27" itemprop="dateCreated datePublished" datetime="2019-07-17T17:02:27+08:00">2019-07-17</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-08-07 17:53:32" itemprop="dateModified" datetime="2019-08-07T17:53:32+08:00">2019-08-07</time>
               
             
           </span>
@@ -577,7 +589,20 @@
       
         
           
-            
+            <a id="more"></a>
+<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><ol>
+<li><p>Install Docker in CentOS</p>
+<p><code></code>sudo yum install -y yum-utils \<br> device-mapper-persistent-data \<br> lvm2</p>
+<p> sudo yum-config-manager \<br> –add-repo \<br> <a href="https://download.docker.com/linux/centos/docker-ce.repo" target="_blank" rel="noopener">https://download.docker.com/linux/centos/docker-ce.repo</a></p>
+<p> sudo yum install docker-ce docker-ce-cli containerd.io<code></code></p>
+</li>
+<li><p>Post Install</p>
+</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl <span class="built_in">enable</span> docker</span><br><span class="line">sudo systemctl start docker</span><br><span class="line"></span><br><span class="line">sudo usermod -aG docker <span class="variable">$USER</span></span><br><span class="line"></span><br><span class="line">docker ps</span><br><span class="line">docker run --rm hello-world</span><br><span class="line"></span><br><span class="line">sudo systemctl stop firewalld</span><br><span class="line">sudo systemctl start firewalld</span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><figcaption><span>/etc/docker/daemon.json</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"registry-mirrors"</span>: [<span class="string">"http://192.168.11.211:5000"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Ref"><a href="#Ref" class="headerlink" title="Ref"></a>Ref</h2><p>Docker: <a href="https://www.docker.com/" title="Docker" target="_blank" rel="noopener">https://www.docker.com/</a></p>
+
           
         
       
